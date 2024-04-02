@@ -7,3 +7,5 @@ packaging.egg-info/PKG-INFO
 packaging.egg-info/SOURCES.txt
 packaging.egg-info/dependency_links.txt
 packaging.egg-info/top_level.txt
+packaging/sub_package/__init__.py
+packaging/sub_package/myfile.py
