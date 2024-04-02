@@ -50,10 +50,35 @@ from packaging.myotherfile import CONSTANT
 
 It will work for sure, because we are adding to the path everytime we are calling the function. But this is the **worst way of doing this**. 
 
--------------------------------
------------------------------
-### 2. Module 
 
-Module is a **single piece** of an **import path** in python. People also say that module is a **file** ends in **.py** however folders can be a **module**. 
+**Third method to solve this issue (proper way):**
+
+Third and best way to do this **packaging the code**. There are lot of ways you can package the code, but we're gonna see the **legacy way** of packaging the code using **setup** module availale in python.
+
+
+
+### 2. Terms
+
+**Module**: 
+
+> Module is a **single piece** or **portion** of an **import path** in python. People also say that module is a **file** ends in **.py** however this **module** can be also a **folder** contains `__init__.py` file.
+
+**Package**:  
+
+> A python **module** which contains **submodules** or **subpackages**. Technically, a package is a python module with a `__init__.py` and some other **.py** files.
+
+**Distribution package**: 
+
+> Distribution package is basically a **zip file** containing all of the **python files**. This is what we are going to build.
+
+
+
+### 3. Creating Distribution Package
+
+Well, back in the 1980s, the python standard library had a builtin library called **distutils**. It had lot of utilities for creating **distribution package in python** but it had lot of error and hard to use. So the third party called **setup utils** basically a wrapper of the **distutils**. 
+
+This is the legacy way of creating a **python distribution package**.  Check the **setup.py** file.
+
+After packaging the code, you can remove the **second method to solve this problem** and run without doing anythng. :)
 
 
