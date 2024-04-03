@@ -15,4 +15,5 @@
 
 from packaging.myotherfile import CONSTANT
 BRO = "LJLJ"
+BRO = "NO BRO"
 print(CONSTANT)

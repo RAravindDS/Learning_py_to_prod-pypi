@@ -84,7 +84,39 @@ After packaging the code, you can remove the **second method to solve this probl
 
 #### 3.1 Reporducability 
 
-**reproducibility** is a characteristic of the code you write that makes it so across time or across different machiens or across different environments where you r code might be running. You can always re-run the code to get the similar results. 
+**Reproducibility** is a characteristic of the code you write that makes it so across time or across different machiens or across different environments where you r code might be running. You can always re-run the code to get the similar results. 
 
-However if we are not mentioning the pacakging details with version it's impossible to reproduce the code. So we should metion the versions and the packages used in the package. To implement this, you can add the **install_requries** in the setup.py file. 
+However if we are not mentioning the pacakging details with version it's impossible to reproduce the code. So we should metion the packages used in the package. To implement this, you can add the **install_requries** in the setup.py file. 
+
+#### 3.2 Distribution formats 
+
+##### **3.2.2 Sdist** 
+
+So far we discussed about **sdist** (source distribution) distriubtion package format, we've been doing that by `python setup.py build sdist`. Source distribution means that distribution contains a subset of our source code. Essentially we take the source code from our project and just zipped them up into the tar file. One interesting thing is it contains the copy of the source code. Moreover, there are lot of problem with this format about compiling, soruce code and more. So people proposed a new distribution format called **wheel**. This is solving all the problems in the sdist distribution format. 
+
+**sidst shortcommings** 
+
+1. May make assumptions about customer machine e.g. requires "gcc" to run "gcc numpy/*.c" 
+2. Is slow: setup.py must be executed, compilation may be required. 
+3. Is insecure: setup.py may contain arbirary code. 
+
+##### **3.2.3 Wheel**
+
+The soultion for all the shortcommings is a relatively new distrubiotn package formt that is not the soruce distribution, Instead it's a format called **binary distribution** format,  It has the precompiled binaries already inside.  
+
+To simply run a **wheel** format run this command: `python setup.py bdist_wheel` Before running this we have to add a **wheel** extension to the **setup.py** file by simply installing `pip install wheel`. 
+
+After running this, you can see the **dist** folder contains **wheel** (binary) file instead of **tar** file and also you can see the file name is really big compare to the old one. After building this, you can run `pip install /workspaces/Learning_py_to_prod-pypi/dist/packaging-0.0.0-py3-none-any.whl`
+
+If you want to understand the file name, check this: 
+
+<img src="images/new_file_name.png" width=800>
+
+
+The advantage of **wheel** file is **precompiled binary** file. So, ther's no reason user to run the **setup.py** file. The **downside** of this, it puts more onus on the producer of the package or the publisher of the package to actualy build mutliple version of their package because they're going to have to build one per platform and maybe even per python version. 
+
+
+### 4. Build Dependencies 
+
+We talked about **package dependencies** before, which are all the packages that we include in the install require array. A **build dependency** is something that is required to build the package in the first place. The exmaple of the dependecy is **wheel** and **sdist** distrubution formats.
 
