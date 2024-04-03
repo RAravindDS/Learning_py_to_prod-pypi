@@ -8,7 +8,7 @@ The first advantage is that **distributing your code**, there are lot of ways yo
 
 The second advantage is that **non-painful import statements**. If you're working with multiple python files, you will sure have a problem with import the module for 1 dir away. 
 
-The third advantage is that **reproducibility**, it means the ability to run your code or rerun your code and always get consistent results.
+The third advantage is that **reproducibility**, it means the ability to run your code or rerun your code and always get consistent results. 
 
 And, having this skill is going to seriously improve quality of life while you're writing code. 
 
@@ -32,7 +32,7 @@ To solve this issue we can use **PYTHONPATH** variable to solve this problem. **
 
 **First method to solve the issue**: 
 
-If you want to import a module which contains above your directory you can use **append** the parent directory to the python path and then you can import a module without any error. 
+If you want to import a module which contains above your directory you can **append** the parent directory to the python path and then you can import a module without any error. 
 
 `PYTHONPATH=$PYTHONPATH:/workspaces/Learning_py_to_prod-pypi python packaging/sub_package/myfile.py`
 
@@ -81,4 +81,10 @@ This is the legacy way of creating a **python distribution package**.  Check the
 
 After packaging the code, you can remove the **second method to solve this problem** and run without doing anythng. :)
 
+
+#### 3.1 Reporducability 
+
+**reproducibility** is a characteristic of the code you write that makes it so across time or across different machiens or across different environments where you r code might be running. You can always re-run the code to get the similar results. 
+
+However if we are not mentioning the pacakging details with version it's impossible to reproduce the code. So we should metion the versions and the packages used in the package. To implement this, you can add the **install_requries** in the setup.py file. 
 

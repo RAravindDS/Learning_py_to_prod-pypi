@@ -6,7 +6,8 @@ setup(
     packages=find_packages(), # It will find all packages in your code, if you want to specify ["packaing", 'packaging.sub_package'] 
     author="Aravind", 
     description="This is a cute project", 
-    licence="MIT"
+    licence="MIT", 
+    install_requires=["numpy==1.24.3"]
 
 )
 
