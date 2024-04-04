@@ -1,3 +1,24 @@
+Metadata-Version: 2.1
+Name: my-cute-package
+Version: 0.0.0
+Summary: My package description
+Author: Josiah Carberry
+Author-email: josiah_carberry@brown.edu
+License: MIT
+Keywords: one,two
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: wheel
+Provides-Extra: pdf
+Requires-Dist: ReportLab>=1.2; extra == "pdf"
+Requires-Dist: RXP; extra == "pdf"
+Provides-Extra: rest
+Requires-Dist: docutils>=0.3; extra == "rest"
+Requires-Dist: pack==1.1,==1.3; extra == "rest"
+
 # Python Packaging Index
 
 The pypi website contains the **zip file** contains python code as well as crucial metadata about the code and allows us to run it ourself. So a **package** is a distributable set of python code together with the metadata about how to run that code. 
@@ -129,8 +150,6 @@ One easy of handlling build dependencies is putting `setup_requires` this in set
 Still now we're just talking about only **setup.py** file. There are lot of **dis-advantage** when we are using the setup.py file. For Example: Take pytorch [setup.py](https://github.com/pytorch/pytorch/blob/main/setup.py), if you see carefully it contains more than 1000 lines of code in that and they are importing some functions like `tools` this are all not a standard package however still they are importing. There is **no functionality** available like this in setup.py file. 
 
 If you are running like this, your script won't work. To **address** this **issue**, we are gonna use something called **pyproject.toml**. This whole purpose is to **address this issue of managing build dependencies** needed by setup tools to execute setup.py file. 
-
-Let's say if you have more than 10 config files like ".black", ".flake8" and more. Having those configuration files are really hectic. What if we are putting all the configuration file in same place. By using pyproject.toml we can put all the files in same plac.e 
 
 You can mention that any libraries that you needed to install in advance in the pyproject.toml file. Please check the **pyproject.toml** file. 
 

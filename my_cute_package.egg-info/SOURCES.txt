@@ -1,0 +1,16 @@
+pyproject.toml
+readme.md
+setup.cfg
+setup.py
+my_cute_package.egg-info/PKG-INFO
+my_cute_package.egg-info/SOURCES.txt
+my_cute_package.egg-info/dependency_links.txt
+my_cute_package.egg-info/entry_points.txt
+my_cute_package.egg-info/not-zip-safe
+my_cute_package.egg-info/requires.txt
+my_cute_package.egg-info/top_level.txt
+packaging_demo/__init__.py
+packaging_demo/myfile.py
+packaging_demo/myotherfile.py
+packaging_demo/sub_package/__init__.py
+packaging_demo/sub_package/myfile.py

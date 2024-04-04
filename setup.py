@@ -1,15 +1,19 @@
 from setuptools import setup, find_packages 
 import wheel, pandas 
 
-setup(
-    Name="my-cute-package", 
-    version="0.0.0", 
-    packages=find_packages(), # It will find all packages in your code, if you want to specify ["packaing", 'packaging.sub_package'] 
-    author="Aravind", 
-    description="This is a cute project", 
-    licence="MIT", 
-    install_requires=["numpy"]
-)
+
+setup()
+
+## Bellow is before the setup.cfg 
+# setup(
+#     Name="my-cute-package", 
+#     version="0.0.0", 
+#     packages=find_packages(), # It will find all packages in your code, if you want to specify ["packaing", 'packaging.sub_package'] 
+#     author="Aravind", 
+#     description="This is a cute project", 
+#     licence="MIT", 
+#     install_requires=["numpy"]
+# )
 
 ## To run this file: python setup.py build sdist (source distribuiton)
 ## This will create "dist" and "packaging.egg-info". Dist folder contains zip file you can install our code. 
