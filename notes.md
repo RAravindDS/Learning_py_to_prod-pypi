@@ -118,5 +118,21 @@ The advantage of **wheel** file is **precompiled binary** file. So, ther's no re
 
 ### 4. Build Dependencies 
 
-We talked about **package dependencies** before, which are all the packages that we include in the install require array. A **build dependency** is something that is required to build the package in the first place. The exmaple of the dependecy is **wheel** and **sdist** distrubution formats.
+We talked about **package dependencies** before, which are all the packages that we include in the install require array. A **build dependency** is something that is required to build the package in the first place. The exmaple of the dependecy is **wheel** and **sdist** distrubution formats. When end users intall our package, we don't want them to end up with any of our build dependencies in their environment. It's only package dependencies that we want to be installed in their environment, but we need to have **build dependencies**. 
+
+One easy of handlling build dependencies is putting `setup_requires` this in setup.py file. Which is an another array containing all of the python package build dependencies.
+
+### 5. Pyproject.toml 
+
+Still now we're just talking about only **setup.py** file. There are lot of **dis-advantage** when we are using the setup.py file. For Example: Take pytorch [setup.py](https://github.com/pytorch/pytorch/blob/main/setup.py), if you see carefully it contains more than 1000 lines of code in that and they are importing some functions like `tools` this are all not a standard package however still they are importing. There is **no functionality** available like this in setup.py file. 
+
+If you are running like this, your script won't work. To **address** this **issue**, we are gonna use something called **pyproject.toml**. This whole purpose is to **address this issue of managing build dependencies** needed by setup tools to execute setup.py file. 
+
+You can mention that any libraries that you needed to install in advance in the pyproject.toml file. Please check the **pyproject.toml** file. 
+
+To run this successfully you need to install `pip install build` and run this command `python -m build --sdist --wheel ./`
+
+
+
+
 

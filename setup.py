@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages 
+import wheel, pandas 
 
 setup(
     Name="my-cute-package", 
@@ -7,8 +8,7 @@ setup(
     author="Aravind", 
     description="This is a cute project", 
     licence="MIT", 
-    install_requires=["numpy==1.24.3"]
-
+    install_requires=["numpy"]
 )
 
 ## To run this file: python setup.py build sdist (source distribuiton)
@@ -20,7 +20,7 @@ setup(
 ## You can check the package in this path: /workspaces/Learning_py_to_prod-pypi/venv/lib/python3.10/site-packages/packaging
 ## Basically all the packages will be in site-packages 
 
-## If you're chaning anythign you have to uninstall this package and reinstall to get the new code. 
+## If you're changing any code you have to uninstall this package and reinstall to get the new code. 
 ## But this is very Mandane task to do that. So you can use the --editable command. 
 ## simply it modify the new chagnes in the venv/site-packages.
 ## use this: `pip install --editable ./`
