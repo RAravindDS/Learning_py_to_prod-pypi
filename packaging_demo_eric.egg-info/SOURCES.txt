@@ -1,0 +1,12 @@
+pyproject.toml
+packaging_demo/__init__.py
+packaging_demo/myfile.py
+packaging_demo/myotherfile.py
+packaging_demo/states_info.py
+packaging_demo/sub_package/__init__.py
+packaging_demo/sub_package/myfile.py
+packaging_demo_eric.egg-info/PKG-INFO
+packaging_demo_eric.egg-info/SOURCES.txt
+packaging_demo_eric.egg-info/dependency_links.txt
+packaging_demo_eric.egg-info/requires.txt
+packaging_demo_eric.egg-info/top_level.txt

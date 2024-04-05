@@ -154,6 +154,9 @@ Please check the **pyproject.toml**.
 
 Once you created a proper **pyproject.toml**, you can delete setup.cfg and also setup.py file because this is the most modern way of creating a **distrubtion package**. 
 
+After all this things, you can create a **distribution package** by running this command: `python -m build --sdist --wheel ./`. 
 
 
 
+#### -1 Extensions 
+* Path Intellisense 
