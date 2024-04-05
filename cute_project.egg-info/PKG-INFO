@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: cute-project
+Version: 0.0.0
+Summary: My awesome cute project
+Author: Aravindan Ravi
+Author-email: aravindan.ravi@super.com
+Maintainer-email: Aravindan Ravi <aravindan.ravi@python.org>
+Project-URL: homepage, https://example.com
+Project-URL: documentation, https://readthedocs.org
+Project-URL: repository, https://github.com
+Project-URL: changelog, https://github.com/me/spam/blob/master/CHANGELOG.md
+Keywords: egg,bacon,sausage,tomatoes,Lobster Thermidor
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
+Requires-Dist: gidgethub[httpx]>4.0.0
+Requires-Dist: django>2.1; os_name != "nt"
+Requires-Dist: django>2.0; os_name == "nt"
+Provides-Extra: test
+Requires-Dist: pytest<5.0.0; extra == "test"
+Requires-Dist: pytest-cov[all]; extra == "test"

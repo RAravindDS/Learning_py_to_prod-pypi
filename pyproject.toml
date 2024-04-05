@@ -1,2 +1,52 @@
 [build-system]
-requires = ["setuptools", "wheel", "pandas"]
+requires = ["setuptools>=61.0.0", "wheel", "pandas"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "cute-project"
+version = "0.0.0"
+description = "My awesome cute project"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE.txt"}
+keywords = ["egg", "bacon", "sausage", "tomatoes", "Lobster Thermidor"]
+authors = [
+  {email = "aravindan.ravi@super.com"},
+  {name = "Aravindan Ravi"}
+]
+maintainers = [
+  {name = "Aravindan Ravi", email = "aravindan.ravi@python.org"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+dependencies = [
+  "httpx",
+  "gidgethub[httpx]>4.0.0",
+  "django>2.1; os_name != 'nt'",
+  "django>2.0; os_name == 'nt'"
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest < 5.0.0",
+  "pytest-cov[all]"
+]
+
+[project.urls]
+homepage = "https://example.com"
+documentation = "https://readthedocs.org"
+repository = "https://github.com"
+changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+[project.scripts]
+spam-cli = "spam:main_cli"
+
+[project.gui-scripts]
+spam-gui = "spam:main_gui"
+
+[project.entry-points."spam.magical"]
+tomatoes = "spam:main_tomatoes"

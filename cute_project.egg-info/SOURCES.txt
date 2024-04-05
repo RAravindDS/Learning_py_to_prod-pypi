@@ -1,0 +1,12 @@
+pyproject.toml
+cute_project.egg-info/PKG-INFO
+cute_project.egg-info/SOURCES.txt
+cute_project.egg-info/dependency_links.txt
+cute_project.egg-info/entry_points.txt
+cute_project.egg-info/requires.txt
+cute_project.egg-info/top_level.txt
+packaging_demo/__init__.py
+packaging_demo/myfile.py
+packaging_demo/myotherfile.py
+packaging_demo/sub_package/__init__.py
+packaging_demo/sub_package/myfile.py

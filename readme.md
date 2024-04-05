@@ -112,7 +112,7 @@ After running this, you can see the **dist** folder contains **wheel** (binary) 
 
 If you want to understand the file name, check this: 
 
-<img src="images/new_file_name.png" width=800>
+<img src="packaging_demo/images/new_file_name.png" width=800>
 
 
 The advantage of **wheel** file is **precompiled binary** file. So, ther's no reason user to run the **setup.py** file. The **downside** of this, it puts more onus on the producer of the package or the publisher of the package to actualy build mutliple version of their package because they're going to have to build one per platform and maybe even per python version. 
@@ -144,6 +144,15 @@ After setting up **setup.cfg** file, now setup.py file actualy gets it's values 
 
 Please check the **setup.cfg**
 
+### 7. [**Modern Way of packaging**](https://packaging.python.org/en/latest/specifications/)
+
+This is the most modern way of creating a distribution package. 
+
+**Storing metadata in Pyproject.toml**: All of the attributes that we use to store in **setup.cfg** file wiill be stored in **pyproject.toml**.
+
+Please check the **pyproject.toml**. 
+
+Once you created a proper **pyproject.toml**, you can delete setup.cfg and also setup.py file because this is the most modern way of creating a **distrubtion package**. 
 
 
 
