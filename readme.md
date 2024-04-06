@@ -156,7 +156,14 @@ Once you created a proper **pyproject.toml**, you can delete setup.cfg and also 
 
 After all this things, you can create a **distribution package** by running this command: `python -m build --sdist --wheel ./`. 
 
+In this modern way of packaging, if you want to include any data files like **csv**, **json**. You have to include explicitily. To do that you can create **Manifest.in** file and mention the file path. Basically a MANIFEST.in file comes from distuils package. Check the Manifest.in file. 
 
+Now we are going back to previous form, in the sense we are having lot of config files now. Let's try to include this in pyproject.toml file. So you can delete the MAINFEST.in file. You can include like this: 
+
+```toml
+[tool.setuptools.package-data]
+package_demo = ["*.json"]
+```
 
 #### -1 Extensions 
 * Path Intellisense 

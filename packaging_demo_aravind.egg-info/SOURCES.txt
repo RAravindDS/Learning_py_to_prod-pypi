@@ -1,3 +1,4 @@
+MANIFEST.in
 pyproject.toml
 packaging_demo/__init__.py
 packaging_demo/myfile.py

@@ -1,0 +1,5 @@
+include pacakging_demo/*.json 
+
+
+#If you want to include all the files in your module, you can use this 
+#recursive-include pacakging_demo/*.json
